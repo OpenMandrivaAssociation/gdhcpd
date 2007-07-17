@@ -1,7 +1,7 @@
 Summary:	GDHCPD -- A GTK+ administation tool for the ISC DHCPD server
 Name:		gdhcpd
-Version:	0.3.1
-Release:	%mkrel 2
+Version:	0.3.2
+Release:	%mkrel 1
 License:	GPL
 Group:		System/Configuration/Networking
 URL:		http://www.gadmintools.org/
