@@ -54,7 +54,7 @@ install -m 644 etc/security/console.apps/%{name} %{buildroot}%{_sysconfdir}/secu
 # locales
 %find_lang %name
 
-# Mandrake Icons
+# Mandriva Icons
 install -d %{buildroot}%{_iconsdir}
 install -d %{buildroot}%{_miconsdir}
 install -d %{buildroot}%{_liconsdir}
@@ -62,7 +62,7 @@ convert -geometry 48x48 pixmaps/gdhcpd.png %{buildroot}%{_liconsdir}/%{name}.png
 convert -geometry 32x32 pixmaps/gdhcpd.png %{buildroot}%{_iconsdir}/%{name}.png
 convert -geometry 16x16 pixmaps/gdhcpd.png %{buildroot}%{_miconsdir}/%{name}.png
 
-# Mandrake Menus
+# Mandriva Menus
 install -d %{buildroot}/%{_menudir}
 cat > %{buildroot}%{_menudir}/%{name} <<EOF
 ?package(%{name}): \
