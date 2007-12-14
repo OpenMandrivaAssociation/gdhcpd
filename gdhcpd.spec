@@ -1,8 +1,8 @@
 Summary:	GDHCPD -- A GTK+ administation tool for the ISC DHCPD server
 Name:		gdhcpd
 Version:	0.3.2
-Release:	%mkrel 1
-License:	GPL
+Release:	%mkrel 2
+License:	GPLv2+
 Group:		System/Configuration/Networking
 URL:		http://www.gadmintools.org/
 Source0:	http://mange.dynalias.org/linux/gdhcpd/%{name}-%{version}.tar.bz2
@@ -63,18 +63,6 @@ convert -geometry 32x32 pixmaps/gdhcpd.png %{buildroot}%{_iconsdir}/%{name}.png
 convert -geometry 16x16 pixmaps/gdhcpd.png %{buildroot}%{_miconsdir}/%{name}.png
 
 # Mandriva Menus
-install -d %{buildroot}/%{_menudir}
-cat > %{buildroot}%{_menudir}/%{name} <<EOF
-?package(%{name}): \
- command="%{_sbindir}/%{name}" \
- title="GDHCPD" \
- longtitle="ISC DHCPD server administration tool" \
- needs="x11" \
- icon="%{name}.png" \
- section="Configuration/Networking" \
- xdg="true" 
-EOF
-
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -84,7 +72,7 @@ Exec=%{_sbindir}/%{name}
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-System-Configuration-Networking;Settings;Network;
+Categories=Settings;Network;GTK;
 EOF
 
 # Prepare usermode entry
@@ -121,9 +109,6 @@ rm -rf %{buildroot}
 %{_datadir}/pixmaps/*.png
 %{_datadir}/pixmaps/%{name}/*.png
 %{_datadir}/pixmaps/%{name}/%{name}.png
-%{_menudir}/%{name}
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
-
-
