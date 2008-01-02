@@ -12,6 +12,7 @@ BuildRequires:	gtk+2-devel
 BuildRequires:	ImageMagick
 Requires:	dhcp-server >= 3.0.1
 Requires:	usermode-consoleonly
+Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 GDHCPD is a fast and easy to use GTK+ administration tool for the
