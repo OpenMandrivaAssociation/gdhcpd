@@ -35,7 +35,7 @@ bzcat %{SOURCE2} > %{name}.pam
 
 perl -pi -e 's|^#define DHCPD_BINARY .*|#define DHCPD_BINARY \"%{_sbindir}/dhcpd\"|g' config.h
 perl -pi -e 's|^#define DHCPD_CONF .*|#define DHCPD_CONF \"%{_sysconfdir}/dhcpd.conf\"|g' config.h
-perl -pi -e 's|^#define LEASE_FILE .*|#define LEASE_FILE \"%{_localstatedir}/dhcp/dhcpd.leases\"|g' config.h
+perl -pi -e 's|^#define LEASE_FILE .*|#define LEASE_FILE \"%{_localstatedir}/lib/dhcp/dhcpd.leases\"|g' config.h
 
 %make
 
