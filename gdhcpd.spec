@@ -9,7 +9,7 @@ Source0:	http://mange.dynalias.org/linux/gdhcpd/%{name}-%{version}.tar.bz2
 Source1:	%{name}.pam-0.77.bz2
 Source2:	%{name}.pam.bz2
 BuildRequires:	gtk+2-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 Requires:	dhcp-server >= 3.0.1
 Requires:	usermode-consoleonly
 Buildroot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
